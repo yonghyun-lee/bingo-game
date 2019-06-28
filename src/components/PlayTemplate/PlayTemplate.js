@@ -4,7 +4,6 @@ import BingoHeader from "../PlayHeader/BingoHeader";
 import OnePlayerGame from "../OnePlayerGame/OnePlayerGame";
 
 const PlayTemplate = (props) => {
-  // console.log(props.playerNum===);
   return (
     <div className="PlayTemplate">
       <BingoHeader player={props.playerNum}/>
@@ -12,7 +11,7 @@ const PlayTemplate = (props) => {
         <OnePlayerGame
           table={props.table}
           start={props.start}
-          firstStart={props.firstStart}/>:
+          onClick={props.onClick}/>:
         <div>asdf</div>}
     </div>
   );

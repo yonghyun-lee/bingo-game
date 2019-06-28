@@ -16,13 +16,17 @@ class PlayContainer extends Component {
     this.initialize();
   }
 
+  onClick = () => {
+    GameActions.start();
+  };
+
   render() {
     return (
       <PlayTemplate
         playerNum={this.props.playerNum}
         table={this.props.table}
         start={this.props.start}
-        firstStart={this.props.firstStart}/>
+        onClick={this.onClick}/>
     );
   }
 }
@@ -30,7 +34,6 @@ class PlayContainer extends Component {
 export default withRouter(
   connect((state) => ({
       table: state.game.table,
-      start: state.game.start,
-      firstStart: state.game.firstStart
+      start: state.game.start
     })
   )(PlayContainer));

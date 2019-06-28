@@ -5,7 +5,7 @@ import BingoStartButton from "../BingoStartButton/BingoStartButton";
 
 const OnePlayerGame = (props) => {
 
-  const {table, start, firstStart} = props;
+  const {table, start, onClick} = props;
 
   return (
     <div className="OnePlayerGame">
@@ -13,7 +13,7 @@ const OnePlayerGame = (props) => {
         <BingoBox table={table[0]}/>
       </div>
 
-      <BingoStartButton start={start} firstStart={firstStart}/>
+      <BingoStartButton start={start} onClick={onClick}/>
     </div>
   );
 };
