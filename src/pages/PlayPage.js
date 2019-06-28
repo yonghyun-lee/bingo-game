@@ -5,7 +5,7 @@ class PlayPage extends Component{
 
   render() {
     const {playerNum} = this.props.match.params;
-    console.log(playerNum);
+
     return (
       <PlayContainer playerNum={playerNum}/>
     );
