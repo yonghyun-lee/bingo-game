@@ -36,6 +36,6 @@
 
 ## 결과
 
-![](https://gitlab.com/yonghyunlee/bingo/blob/master/images/onePlayer.gif)
+![](https://gitlab.com/yonghyunlee/bingo/raw/master/images/onePlayer.gif)
 
-![](https://gitlab.com/yonghyunlee/bingo/blob/master/images/twoPlayer.gif)
+![](https://gitlab.com/yonghyunlee/bingo/raw/master/images/twoPlayer.gif)
