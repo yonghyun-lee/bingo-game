@@ -21,12 +21,6 @@ export default handleActions({
       if (!action) return;
 
       draft.playerNum = action.payload;
-      if (action.payload === 1) {
-        draft.table = {
-          0: [],
-          1: []
-        };
-      }
     });
   },
 }, initialState);
