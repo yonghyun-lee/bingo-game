@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import LandingTemplate from "./LandingTemplate/LandingTemplate";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         />
       </Helmet>
       <Switch>
+        <Route exact path="/" component={LandingTemplate} />
       </Switch>
     </React.Fragment>
   );
