@@ -5,7 +5,8 @@ import BingoRow from "../BingoRow/BingoRow";
 const BingoBox = (props) => {
 
   return (
-    <div className="BingoBox">
+    <div className={!props.start||props.turn===props.player? "BingoBox": "not-turn"}>
+      <h1>player {props.player+1}</h1>
       {props.table.map((row, index) => {
         return <BingoRow
           row={row}

@@ -24,7 +24,9 @@ const initialState = {
     1: []
   },
   bingoList: [],
-  bingoCount: [0, 0]
+  bingoCount: [0, 0],
+  clickedNum: [],
+  turn: 0
 };
 
 export const actionCreators = {
@@ -81,6 +83,7 @@ export default handleActions({
       }
       draft.bingoList = [];
       draft.bingoCount = [0, 0];
+      draft.turn = 0;
     });
   },
   [NUM_CLICK]: (state, action) => {
@@ -157,12 +160,9 @@ export default handleActions({
 
       draft.bingoCount = bingoCount;
       draft.bingoList = bingoList;
+      if (state.turn === 1) draft.turn=0;
+      else draft.turn=1;
+      draft.clickedNum.push(action.payload);
     });
-  },
-  [BINGO_SUCCESS]: (state, action) => {
-    return produce(state, (draft) => {
-      if (!action) return;
-
-    })
   }
 }, initialState);

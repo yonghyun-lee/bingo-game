@@ -1,9 +1,9 @@
-.OnePlayerGame {
+.TwoPlayerGame {
   flex: 1;
   display: flex;
   align-items: center;
   flex-direction: column; }
-  .OnePlayerGame .board {
+  .TwoPlayerGame .board {
     display: flex; }
 
 /*# sourceMappingURL=TwoPlayerGame.css.map */

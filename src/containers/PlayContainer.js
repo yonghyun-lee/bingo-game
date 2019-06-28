@@ -16,11 +16,11 @@ class PlayContainer extends Component {
     this.initialize();
   }
 
-  componentWillUpdate(nextProps, nextState, nextContext) {
-    if (nextProps.bingoCount[0] >= 5) {
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.bingoCount[0] >= 5) {
       alert("player 1가 빙고를 완성했습니다.");
       GameActions.start();
-    } else if (nextProps.bingoCount[1] >= 5) {
+    } else if (this.props.bingoCount[1] >= 5) {
       alert("player 2가 빙고를 완성했습니다.");
       GameActions.start();
     }
@@ -31,14 +31,17 @@ class PlayContainer extends Component {
   };
 
   numClick = (e) => {
-    const {start} = this.props;
+    const {start, clickedNum} = this.props;
 
     if (!start) return;
+
+    if (clickedNum.includes(Number(e.target.value))) return;
 
     GameActions.numClick(Number(e.target.value));
   };
 
   render() {
+
     return (
       <PlayTemplate
         playerNum={this.props.playerNum}
@@ -49,6 +52,7 @@ class PlayContainer extends Component {
         numClick={this.numClick}
         bingoCount={this.props.bingoCount}
         bingoList={this.props.bingoList}
+        turn={this.props.turn}
       />
     );
   }
@@ -61,5 +65,7 @@ export default withRouter(
       start: state.game.start,
       bingoList: state.game.bingoList,
       bingoCount: state.game.bingoCount,
+      turn: state.game.turn,
+      clickedNum: state.game.clickedNum
     })
   )(PlayContainer));

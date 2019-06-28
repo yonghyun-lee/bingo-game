@@ -8,4 +8,7 @@
   justify-content: center;
   align-items: center; }
 
-/*# sourceMappingURL=BingoList.css.map */
+.not-turn {
+  display: none; }
+
+/*# sourceMappingURL=BingoBox.css.map */

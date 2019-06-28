@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EAEtB,qBAAO;IACL,OAAO,EAAE,IAAI",
+"sources": ["TwoPlayerGame.scss"],
+"names": [],
+"file": "TwoPlayerGame.css"
+}
