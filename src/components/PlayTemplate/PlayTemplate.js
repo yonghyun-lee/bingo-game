@@ -9,7 +9,10 @@ const PlayTemplate = (props) => {
     <div className="PlayTemplate">
       <BingoHeader player={props.playerNum}/>
       {props.playerNum==='1'?
-        <OnePlayerGame table={props.table} start={props.start}/>:
+        <OnePlayerGame
+          table={props.table}
+          start={props.start}
+          firstStart={props.firstStart}/>:
         <div>asdf</div>}
     </div>
   );

@@ -1,12 +1,11 @@
 import React from 'react';
 import './OnePlayerGame.scss';
 import BingoBox from "../BingoBox/BingoBox";
+import BingoStartButton from "../BingoStartButton/BingoStartButton";
 
 const OnePlayerGame = (props) => {
 
-  const {table, start} = props;
-
-  // console.log(table, start);
+  const {table, start, firstStart} = props;
 
   return (
     <div className="OnePlayerGame">
@@ -14,7 +13,7 @@ const OnePlayerGame = (props) => {
         <BingoBox table={table[0]}/>
       </div>
 
-      <button>시작</button>
+      <BingoStartButton start={start} firstStart={firstStart}/>
     </div>
   );
 };

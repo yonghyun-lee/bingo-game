@@ -3,11 +3,14 @@ import produce from 'immer';
 import {bingo} from "../../lib/config";
 
 const GAME_INIT = 'GAME_INIT';
+const START = 'START';
 
 const gameInit = createAction(GAME_INIT, (payload) => payload);
+const start = createAction(START);
 
 const initialState = {
-  start: null,
+  start: false,
+  firstStart: false,
   playerNum: 0,
   table: {
     0: [],
@@ -16,7 +19,8 @@ const initialState = {
 };
 
 export const actionCreators = {
-  gameInit
+  gameInit,
+  start
 };
 
 export default handleActions({
@@ -34,6 +38,14 @@ export default handleActions({
         }
       }
       draft.table = table;
+    });
+  },
+  [START]: (state, action) => {
+    return produce(state, (draft) => {
+      if (!action) return;
+
+      draft.start = true;
+      draft.firstStart = true;
     });
   },
 }, initialState);
