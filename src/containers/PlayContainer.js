@@ -17,10 +17,15 @@ class PlayContainer extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.bingoCount[0] >= 5) {
+    const {bingoCount} = this.props;
+
+    if (bingoCount[0] >= 5 && bingoCount[1] >= 5) {
+      alert("무승부입니다.");
+      GameActions.start();
+    } else if (bingoCount[0] >= 5) {
       alert("player 1가 빙고를 완성했습니다.");
       GameActions.start();
-    } else if (this.props.bingoCount[1] >= 5) {
+    } else if (bingoCount[1] >= 5) {
       alert("player 2가 빙고를 완성했습니다.");
       GameActions.start();
     }
