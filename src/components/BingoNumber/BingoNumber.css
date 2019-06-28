@@ -2,4 +2,7 @@
   width: 70px;
   height: 70px; }
 
-/*# sourceMappingURL=BingoStartButton.css.map */
+.clicked {
+  background-color: yellow; }
+
+/*# sourceMappingURL=BingoNumber.css.map */

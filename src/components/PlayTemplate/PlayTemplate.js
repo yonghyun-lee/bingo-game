@@ -10,8 +10,10 @@ const PlayTemplate = (props) => {
       {props.playerNum==='1'?
         <OnePlayerGame
           table={props.table}
+          tableState={props.tableState}
           start={props.start}
-          onClick={props.onClick}/>:
+          startClick={props.startClick}
+          numClick={props.numClick}/>:
         <div>asdf</div>}
     </div>
   );

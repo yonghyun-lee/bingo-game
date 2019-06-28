@@ -7,7 +7,12 @@ const BingoBox = (props) => {
   return (
     <div className="BingoBox">
       {props.table.map((row, index) => {
-        return <BingoRow row={row} rowIndex={index} key={index}/>
+        return <BingoRow
+          row={row}
+          rowIndex={index}
+          key={index}
+          numClick={props.numClick}
+          tableState={props.tableState}/>
       })}
     </div>
   );
