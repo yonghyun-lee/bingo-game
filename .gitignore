@@ -23,3 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+src/components/LandingTemplate/.sass-cache/
+src/components/LandingTemplate/LandingTemplate.css
+src/components/LandingTemplate/LandingTemplate.css.map
+src/styles/.sass-cache/
+src/styles/base.css
+src/styles/base.css.map
+/.sass-cache
+
