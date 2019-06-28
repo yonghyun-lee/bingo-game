@@ -3,7 +3,7 @@ import './BingoNumber.scss'
 
 const BingoNumber = (props) => (
   <button className="BingoNum">
-    0
+    {props.num}
   </button>
 );
 
