@@ -2,9 +2,6 @@ import React from 'react';
 import './BingoList.scss'
 
 const BingoList = (props) => {
-
-  console.log(props.bingoList);
-
   return (
     <div className="BingoList">
      <ul>

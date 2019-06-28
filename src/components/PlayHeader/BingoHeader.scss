@@ -3,4 +3,13 @@
   display: flex;
   justify-content: center;
   font-size: 5rem;
+
+  a {
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 100px;
+    height: 30px;
+  }
 }

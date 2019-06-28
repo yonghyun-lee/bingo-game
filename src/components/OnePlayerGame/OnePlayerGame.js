@@ -11,7 +11,7 @@ const OnePlayerGame = (props) => {
   return (
     <div className="OnePlayerGame">
       <div className="board">
-        <BingoBox player={1} table={table[0]} numClick={numClick} tableState={tableState[0]}/>
+        <BingoBox player={0} table={table[0]} numClick={numClick} tableState={tableState[0]}/>
         <BingoList bingoCount={bingoCount} bingoList={bingoList}/>
       </div>
 

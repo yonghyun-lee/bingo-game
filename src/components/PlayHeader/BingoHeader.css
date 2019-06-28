@@ -3,5 +3,12 @@
   display: flex;
   justify-content: center;
   font-size: 5rem; }
+  .BingoHeader a {
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 100px;
+    height: 30px; }
 
-/*# sourceMappingURL=PlayHeader.css.map */
+/*# sourceMappingURL=BingoHeader.css.map */

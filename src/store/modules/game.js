@@ -58,7 +58,12 @@ export default handleActions({
           tableState[boxNum][row] = new Array(bingo.numberCount).fill(false);
         }
       }
+      draft.start = false;
       draft.tableState = tableState;
+      draft.bingoList = [];
+      draft.bingoCount = [0, 0];
+      draft.turn = 0;
+      draft.clickedNum = [];
     });
   },
   [START]: (state, action) => {
@@ -84,6 +89,7 @@ export default handleActions({
       draft.bingoList = [];
       draft.bingoCount = [0, 0];
       draft.turn = 0;
+      draft.clickedNum = [];
     });
   },
   [NUM_CLICK]: (state, action) => {
