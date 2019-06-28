@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 
 const LandingPlayer = () => (
   <div className="LandingPlayer">
-    <Link to="/one">1 player</Link>
-    <Link to="/two">2 player</Link>
+    <Link to="/play/1">1 player</Link>
+    <Link to="/play/2">2 player</Link>
   </div>
 );
 

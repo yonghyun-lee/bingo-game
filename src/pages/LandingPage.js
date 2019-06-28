@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import LandingContainer from "../containers/LandingContainer";
+import LandingTemplate from "../components/LandingTemplate/LandingTemplate";
 
 class LandingPage extends Component{
 
   render() {
     return (
-      <LandingContainer />
+      <LandingTemplate />
     );
   }
 }

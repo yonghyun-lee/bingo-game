@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import LandingTemplate from "./LandingTemplate/LandingTemplate";
+import PlayPage from "../pages/PlayPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       </Helmet>
       <Switch>
         <Route exact path="/" component={LandingTemplate} />
+        <Route exact path="/play/:playerNum" component={PlayPage} />
       </Switch>
     </React.Fragment>
   );
