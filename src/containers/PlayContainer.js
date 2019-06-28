@@ -3,7 +3,6 @@ import {withRouter} from "react-router-dom";
 import PlayTemplate from "../components/PlayTemplate/PlayTemplate";
 import {GameActions} from "../store/actionCreators";
 import {connect} from "react-redux";
-import {bingo} from "../lib/config";
 
 class PlayContainer extends Component {
 
@@ -15,6 +14,16 @@ class PlayContainer extends Component {
 
   componentWillMount() {
     this.initialize();
+  }
+
+  componentWillUpdate(nextProps, nextState, nextContext) {
+    if (nextProps.bingoCount[0] >= 5) {
+      alert("player 1가 빙고를 완성했습니다.");
+      GameActions.start();
+    } else if (nextProps.bingoCount[1] >= 5) {
+      alert("player 2가 빙고를 완성했습니다.");
+      GameActions.start();
+    }
   }
 
   startClick = () => {

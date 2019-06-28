@@ -79,6 +79,8 @@ export default handleActions({
           }
         }
       }
+      draft.bingoList = [];
+      draft.bingoCount = [0, 0];
     });
   },
   [NUM_CLICK]: (state, action) => {
@@ -141,6 +143,7 @@ export default handleActions({
             bingoCount[box]++;
           }
         }
+        trueCount=0;
         for (let i=0; i<bingo.rowCount; i++) {
           if (draft.tableState[box][bingo.rowCount-1-i][i]) {
             trueCount++;

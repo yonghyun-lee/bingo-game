@@ -3,10 +3,14 @@ import './BingoList.scss'
 
 const BingoList = (props) => {
 
+  console.log(props.bingoList);
+
   return (
     <div className="BingoList">
-      <ul>
-        {/*{props.bingoList.player}*/}
+     <ul>
+        {props.bingoList.map((val, index)=> {
+          return <li key={index}>player {val.player+1}: {val.type} 성공</li>
+        })}
       </ul>
     </div>
   );
