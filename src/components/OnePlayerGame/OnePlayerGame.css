@@ -3,5 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column; }
+  .OnePlayerGame .board {
+    display: flex; }
 
 /*# sourceMappingURL=OnePlayerGame.css.map */

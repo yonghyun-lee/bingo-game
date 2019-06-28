@@ -3,6 +3,7 @@ import {withRouter} from "react-router-dom";
 import PlayTemplate from "../components/PlayTemplate/PlayTemplate";
 import {GameActions} from "../store/actionCreators";
 import {connect} from "react-redux";
+import {bingo} from "../lib/config";
 
 class PlayContainer extends Component {
 
@@ -19,10 +20,10 @@ class PlayContainer extends Component {
   startClick = () => {
     GameActions.start();
   };
-  
+
   numClick = (e) => {
     const {start} = this.props;
-    
+
     if (!start) return;
 
     GameActions.numClick(Number(e.target.value));
@@ -36,7 +37,10 @@ class PlayContainer extends Component {
         tableState={this.props.tableState}
         start={this.props.start}
         startClick={this.startClick}
-        numClick={this.numClick}/>
+        numClick={this.numClick}
+        bingoCount={this.props.bingoCount}
+        bingoList={this.props.bingoList}
+      />
     );
   }
 }
@@ -45,6 +49,8 @@ export default withRouter(
   connect((state) => ({
       table: state.game.table,
       tableState: state.game.tableState,
-      start: state.game.start
+      start: state.game.start,
+      bingoList: state.game.bingoList,
+      bingoCount: state.game.bingoCount,
     })
   )(PlayContainer));

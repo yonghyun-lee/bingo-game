@@ -13,7 +13,10 @@ const PlayTemplate = (props) => {
           tableState={props.tableState}
           start={props.start}
           startClick={props.startClick}
-          numClick={props.numClick}/>:
+          numClick={props.numClick}
+          bingoCount={props.bingoCount[0]}
+          bingoList={props.bingoList}
+        />:
         <div>asdf</div>}
     </div>
   );

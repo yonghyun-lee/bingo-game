@@ -5,10 +5,12 @@ import {bingo} from "../../lib/config";
 const GAME_INIT = 'GAME_INIT';
 const START = 'START';
 const NUM_CLICK = 'NUM_CLICK';
+const BINGO_SUCCESS = 'BINGO_SUCCESS';
 
 const gameInit = createAction(GAME_INIT, (payload) => payload);
 const start = createAction(START);
 const numClick = createAction(NUM_CLICK, (payload) => payload);
+const bingoSuccess = createAction(BINGO_SUCCESS, (payload) => payload);
 
 const initialState = {
   start: false,
@@ -21,13 +23,15 @@ const initialState = {
     0: [],
     1: []
   },
-  clickedNumber: []
+  bingoList: [],
+  bingoCount: [0, 0]
 };
 
 export const actionCreators = {
   gameInit,
   start,
-  numClick
+  numClick,
+  bingoSuccess
 };
 
 export default handleActions({
@@ -90,6 +94,72 @@ export default handleActions({
           }
         }
       }
+
+      let bingoCount = [0, 0];
+      let bingoList = [];
+
+      // 가로
+      for (let box=0; box<state.playerNum; box++) {
+        for (let row=0; row<bingo.rowCount; row++) {
+          let trueCount = 0;
+          for (let num=0; num<bingo.numberCount; num++) {
+            if (draft.tableState[box][row][num]) {
+              trueCount++;
+            }
+          }
+          if (trueCount === bingo.rowCount) {
+            bingoCount[box]++;
+            bingoList.push({player: box, type: "가로"});
+          }
+        }
+      }
+
+      // 세로
+      for (let box=0; box<state.playerNum; box++) {
+        for (let num=0; num<bingo.numberCount; num++) {
+          let trueCount = 0;
+          for (let row=0; row<bingo.rowCount; row++) {
+            if (draft.tableState[box][row][num]) {
+              trueCount++;
+            }
+            if (trueCount === bingo.rowCount) {
+              bingoCount[box]++;
+              bingoList.push({player: box, type: "세로"});
+            }
+          }
+        }
+      }
+
+      // 대각선
+      for (let box=0; box<state.playerNum; box++) {
+        let trueCount = 0;
+        for (let i=0; i<bingo.rowCount; i++) {
+          if (draft.tableState[box][i][i]) {
+            trueCount++;
+          }
+          if (trueCount === bingo.rowCount) {
+            bingoCount[box]++;
+          }
+        }
+        for (let i=0; i<bingo.rowCount; i++) {
+          if (draft.tableState[box][bingo.rowCount-1-i][i]) {
+            trueCount++;
+          }
+          if (trueCount === bingo.rowCount) {
+            bingoCount[box]++;
+            bingoList.push({player: box, type: "대각선"});
+          }
+        }
+      }
+
+      draft.bingoCount = bingoCount;
+      draft.bingoList = bingoList;
     });
+  },
+  [BINGO_SUCCESS]: (state, action) => {
+    return produce(state, (draft) => {
+      if (!action) return;
+
+    })
   }
 }, initialState);

@@ -1,0 +1,11 @@
+.BingoList {
+  margin-top: 50px;
+  border: black solid 1px;
+  width: 250px;
+  height: 400px; }
+  .BingoList ul {
+    margin: 50px; }
+    .BingoList ul li {
+      font-size: 1.5rem; }
+
+/*# sourceMappingURL=BingoList.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EAEb,aAAG;IACD,MAAM,EAAE,IAAI;IACZ,gBAAG;MACD,SAAS,EAAE,MAAM",
+"sources": ["BingoList.scss"],
+"names": [],
+"file": "BingoList.css"
+}
