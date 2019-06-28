@@ -33,3 +33,6 @@
 - react
 - redux
 - create-react-app
+
+## 결과
+
