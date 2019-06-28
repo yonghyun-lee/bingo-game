@@ -7,8 +7,9 @@ import {connect} from "react-redux";
 class PlayContainer extends Component {
 
   initialize = () => {
-    // todo redux state update
-    GameActions.changePlayerNumber(this.props.playerNum);
+    const {playerNum} = this.props;
+
+    GameActions.gameInit(playerNum);
   };
 
   componentWillMount() {
@@ -19,14 +20,15 @@ class PlayContainer extends Component {
     return (
       <PlayTemplate
         playerNum={this.props.playerNum}
-        table={}/>
+        table={this.props.table}
+        start={this.props.start}/>
     );
   }
 }
 
 export default withRouter(
   connect((state) => ({
-      user: state.login.user,
-      open: state.profile.open
+      table: state.game.table,
+      start: state.game.start
     })
   )(PlayContainer));

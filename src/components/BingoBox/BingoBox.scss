@@ -1,6 +1,10 @@
-.BingoHeader {
+.BingoBox {
   margin-top: 50px;
+  border: black solid 1px;
+  width: 400px;
+  height: 400px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 5rem;
+  align-items: center;
 }

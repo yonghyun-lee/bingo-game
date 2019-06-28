@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAa;EACX,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,IAAI",
+"mappings": "AAAA,SAAU;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI",
 "sources": ["BingoNumber.scss"],
 "names": [],
 "file": "BingoNumber.css"

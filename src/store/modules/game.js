@@ -1,26 +1,39 @@
 import { createAction, handleActions } from 'redux-actions';
 import produce from 'immer';
+import {bingo} from "../../lib/config";
 
-const CHANGE_PLAYER_NUMBER = 'PLAYER_NUMBER';
+const GAME_INIT = 'GAME_INIT';
 
-const changePlayerNumber = createAction(CHANGE_PLAYER_NUMBER, (payload) => payload);
+const gameInit = createAction(GAME_INIT, (payload) => payload);
 
 const initialState = {
   start: null,
   playerNum: 0,
-  table: {}
+  table: {
+    0: [],
+    1: []
+  }
 };
 
 export const actionCreators = {
-  changePlayerNumber
+  gameInit
 };
 
 export default handleActions({
-  [CHANGE_PLAYER_NUMBER]: (state, action) => {
+  [GAME_INIT]: (state, action) => {
     return produce(state, (draft) => {
       if (!action) return;
 
       draft.playerNum = action.payload;
+
+      let table = {};
+      for (let boxNum=0; boxNum < draft.playerNum; boxNum++) {
+        table[boxNum] = new Array(bingo.rowCount);
+        for (let row=0; row<bingo.rowCount; row++) {
+          table[boxNum][row] = new Array(bingo.numberCount).fill(0);
+        }
+      }
+      draft.table = table;
     });
   },
 }, initialState);

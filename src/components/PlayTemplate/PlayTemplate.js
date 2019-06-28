@@ -4,10 +4,13 @@ import BingoHeader from "../PlayHeader/BingoHeader";
 import OnePlayerGame from "../OnePlayerGame/OnePlayerGame";
 
 const PlayTemplate = (props) => {
+  // console.log(props.playerNum===);
   return (
     <div className="PlayTemplate">
       <BingoHeader player={props.playerNum}/>
-      <OnePlayerGame/>
+      {props.playerNum==='1'?
+        <OnePlayerGame table={props.table} start={props.start}/>:
+        <div>asdf</div>}
     </div>
   );
 };
