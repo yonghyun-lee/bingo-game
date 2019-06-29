@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bingo-game/static/css/main.5d139c75.chunk.css",
-    "main.js": "/bingo-game/static/js/main.76660a9b.chunk.js",
-    "main.js.map": "/bingo-game/static/js/main.76660a9b.chunk.js.map",
-    "runtime~main.js": "/bingo-game/static/js/runtime~main.b5198a63.js",
-    "runtime~main.js.map": "/bingo-game/static/js/runtime~main.b5198a63.js.map",
-    "static/js/2.5000f161.chunk.js": "/bingo-game/static/js/2.5000f161.chunk.js",
-    "static/js/2.5000f161.chunk.js.map": "/bingo-game/static/js/2.5000f161.chunk.js.map",
-    "index.html": "/bingo-game/index.html",
-    "precache-manifest.ed8b0cb4a768c103345d8ec74961c124.js": "/bingo-game/precache-manifest.ed8b0cb4a768c103345d8ec74961c124.js",
-    "service-worker.js": "/bingo-game/service-worker.js",
-    "static/css/main.5d139c75.chunk.css.map": "/bingo-game/static/css/main.5d139c75.chunk.css.map"
+    "main.css": "/static/css/main.5d139c75.chunk.css",
+    "main.js": "/static/js/main.f31025ea.chunk.js",
+    "main.js.map": "/static/js/main.f31025ea.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.c5541365.js",
+    "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
+    "static/js/2.5000f161.chunk.js": "/static/js/2.5000f161.chunk.js",
+    "static/js/2.5000f161.chunk.js.map": "/static/js/2.5000f161.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ab76410247c9f11cd0136ce485357c13.js": "/precache-manifest.ab76410247c9f11cd0136ce485357c13.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5d139c75.chunk.css.map": "/static/css/main.5d139c75.chunk.css.map"
   }
 }
