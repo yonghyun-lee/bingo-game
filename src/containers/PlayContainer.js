@@ -7,9 +7,7 @@ import {connect} from "react-redux";
 class PlayContainer extends Component {
 
   initialize = () => {
-    const {playerNum} = this.props;
-
-    GameActions.gameInit(playerNum);
+    GameActions.gameInit();
   };
 
   componentWillMount() {

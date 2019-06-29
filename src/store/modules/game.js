@@ -7,7 +7,7 @@ const START = 'START';
 const NUM_CLICK = 'NUM_CLICK';
 const BINGO_SUCCESS = 'BINGO_SUCCESS';
 
-const gameInit = createAction(GAME_INIT, (payload) => payload);
+const gameInit = createAction(GAME_INIT);
 const start = createAction(START);
 const numClick = createAction(NUM_CLICK, (payload) => payload);
 const bingoSuccess = createAction(BINGO_SUCCESS, (payload) => payload);
@@ -41,10 +41,8 @@ export default handleActions({
     return produce(state, (draft) => {
       if (!action) return;
 
-      draft.playerNum = action.payload;
-
       let table = {};
-      for (let boxNum=0; boxNum < action.payload; boxNum++) {
+      for (let boxNum=0; boxNum < bingo.playerNum; boxNum++) {
         table[boxNum] = new Array(bingo.rowCount);
         for (let row=0; row<bingo.rowCount; row++) {
           table[boxNum][row] = new Array(bingo.numberCount).fill(0);
@@ -52,7 +50,7 @@ export default handleActions({
       }
       draft.table = table;
       let tableState = {};
-      for (let boxNum=0; boxNum < action.payload; boxNum++) {
+      for (let boxNum=0; boxNum < bingo.playerNum; boxNum++) {
         tableState[boxNum] = new Array(bingo.rowCount);
         for (let row=0; row<bingo.rowCount; row++) {
           tableState[boxNum][row] = new Array(bingo.numberCount).fill(false);
