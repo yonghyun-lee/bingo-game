@@ -33,3 +33,22 @@
 - react
 - redux
 - create-react-app
+
+## 결과
+
+![](https://gitlab.com/yonghyunlee/bingo/raw/master/images/onePlayer.gif)
+
+![](https://gitlab.com/yonghyunlee/bingo/raw/master/images/twoPlayer.gif)
+
+## 설치
+
+```bash
+git clone https://gitlab.com/yonghyunlee/bingo
+yarn install
+```
+
+## 시작
+
+```bash
+yarn start
+```
