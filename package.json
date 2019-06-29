@@ -137,7 +137,7 @@
       "react-app"
     ]
   },
-  "homepage": "http://yonghyun-lee.github.io/bingo-game/",
+  "homepage": "https://yonghyun-lee.github.io/bingo-game/",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
