@@ -44,6 +44,7 @@
 
 ```bash
 git clone https://gitlab.com/yonghyunlee/bingo
+cd bingo
 yarn install
 ```
 
