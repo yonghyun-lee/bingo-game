@@ -108,7 +108,7 @@ export default handleActions({
       let bingoList = [];
 
       // 가로
-      for (let box=0; box<state.playerNum; box++) {
+      for (let box=0; box<bingo.playerNum; box++) {
         for (let row=0; row<bingo.rowCount; row++) {
           let trueCount = 0;
           for (let num=0; num<bingo.numberCount; num++) {
@@ -124,7 +124,7 @@ export default handleActions({
       }
 
       // 세로
-      for (let box=0; box<state.playerNum; box++) {
+      for (let box=0; box<bingo.playerNum; box++) {
         for (let num=0; num<bingo.numberCount; num++) {
           let trueCount = 0;
           for (let row=0; row<bingo.rowCount; row++) {
@@ -140,7 +140,7 @@ export default handleActions({
       }
 
       // 대각선
-      for (let box=0; box<state.playerNum; box++) {
+      for (let box=0; box<bingo.playerNum; box++) {
         let trueCount = 0;
         for (let i=0; i<bingo.rowCount; i++) {
           if (draft.tableState[box][i][i]) {
@@ -162,6 +162,7 @@ export default handleActions({
         }
       }
 
+      console.log(bingoCount);
       draft.bingoCount = bingoCount;
       draft.bingoList = bingoList;
       if (state.turn === 1) draft.turn=0;
