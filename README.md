@@ -1,10 +1,8 @@
 # 빙고 게임
 
-## 목적
+## 데모
 
-- Redux, MobX, React 같은 framework, library를 사용하는 이유, 설계 의의를 이해하고 그에 맞게 코드를 작성할 수 있는가
-- application state를 Redux 혹은 MobX에 맞게 설계할 수 있는가
-- React component를 적절히 나눌 수 있는가
+https://silly-mestorf-8e28c2.netlify.com/
 
 ## 요구 사항
 
@@ -32,7 +30,6 @@
 
 - react
 - redux
-- create-react-app
 
 ## 결과
 
